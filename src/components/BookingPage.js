@@ -30,7 +30,7 @@ function BookingPage() {
 
   const fetchCenters = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/centers');
+      const response = await axios.get('https://booking-backend-0rno.onrender.com/api/centers');
       setCenters(response.data);
     } catch (error) {
       console.error('Error fetching centers:', error);
@@ -39,7 +39,7 @@ function BookingPage() {
 
   const fetchSports = async (centerId) => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/sports?center=${centerId}`);
+      const response = await axios.get(`https://booking-backend-0rno.onrender.com/api/sports?center=${centerId}`);
       setSports(response.data);
       setSelectedSport(''); // Reset selected sport when center changes
       setAvailableCourts([]); // Reset available courts
@@ -51,7 +51,7 @@ function BookingPage() {
 
   const fetchBookings = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/bookings?center=${selectedCenter}&sport=${selectedSport}&date=${selectedDate}`);
+      const response = await axios.get(`https://booking-backend-0rno.onrender.com/api/bookings?center=${selectedCenter}&sport=${selectedSport}&date=${selectedDate}`);
       setBookings(response.data);
     } catch (error) {
       console.error('Error fetching bookings:', error);
@@ -77,7 +77,7 @@ function BookingPage() {
     console.log({ selectedCenter, selectedSport, selectedDate })
     if (selectedCenter && selectedSport && selectedDate) {
       try {
-        const response = await axios.get(`http://localhost:4000/api/bookings/available-slots`, {
+        const response = await axios.get(`https://booking-backend-0rno.onrender.com/api/bookings/available-slots`, {
           params: {
             center: selectedCenter,
             sport: selectedSport,
@@ -132,7 +132,7 @@ function BookingPage() {
   const handleCreateBooking = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:4000/api/bookings', {
+      await axios.post('https://booking-backend-0rno.onrender.com/api/bookings', {
         center: selectedCenter,
         sport: selectedSport,
         court: newBooking.court,
