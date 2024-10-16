@@ -5,7 +5,7 @@
 **College ID Number**: IEC2021099
 
 ## Deployed Link
-- [Frontend Application]((https://booking-frontend-dhcj.onrender.com))
+- [Frontend Application](https://booking-frontend-dhcj.onrender.com)
 
 ## Description
 This is the frontend part of the Sports Booking Application built using React and Tailwind CSS. The Sports Booking Application is a web-based platform designed to facilitate the booking of sports facilities. Users can easily find and reserve courts for various sports at different centers. The application provides a user-friendly interface for both users and administrators, allowing for efficient management of bookings, sports, and centers.
